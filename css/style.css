@@ -1,0 +1,39 @@
+body {
+	background: #F1F1F1;
+	font-family: Cambria;
+	text-align: center
+}
+h1 {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-shadow: 1px 0 1px #472b2e;
+}
+input {
+	border-radius: 1em;
+	border: 1px solid #D6D6D6;
+	padding: 1em;
+}
+input:hover {
+	border: 1px solid #ABCDEF;
+}
+.container {
+	background: #FFF;
+	border: 1px solid #D6D6D6;
+	margin: 0.5em auto;
+	padding: 2em;
+	width: 50%;
+}
+#no-date, #si-date {
+	background: #ea7979;
+	border: 1px solid #dd3939;
+	color: #FFF;
+	display: none;
+	font-size: 1.4em;
+	position: relative;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#si-date {
+	background: #77b7f7;
+	border: 1px solid #3690ea;
+}
