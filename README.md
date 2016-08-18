@@ -1,2 +1,2 @@
 # Modernizr-LoadJS
-Input Date - Modernizr + loadJS&lt;
+Input Date - Modernizr + loadJS
