@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Input Date - Modernizr</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" />
+	<script type="text/javascript" src="js/modernizr-full.js"></script>
+	<script src="js/loadJS.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Input Date - Modernizr + loadJS</h1>
+		<p>Fecha: <input type="date" id="datepicker"></p>
+	</div>
+
+	<div id="no-date">
+		<p>El navegador no soporta el Input de tipo Fecha (date)</p>
+		<p>Aun así gracias a Modernizr + loadJS se logra cargar un Polyfill, que solventar esta incompatibilidad.</p>
+	</div>
+
+	<div id="si-date">
+		<p>El navegador si soporta el Input de tipo Fecha (date)</p>
+	</div>
+
+	<script>
+(function () {
+
+	// Modernizr + loadJS
+	if ( !Modernizr.inputtypes.date ) {
+		loadJS(
+			["https://code.jquery.com/jquery-1.12.4.js",
+			"https://code.jquery.com/ui/1.12.0/jquery-ui.js"],
+			function() {
+				$( "#datepicker" ).datepicker();
+			}
+		);
+		document.getElementById('no-date').style.display = "block";
+	} else {
+		document.getElementById('si-date').style.display = "block";
+	}
+
+})();
+	</script>
+
+</body>
+</html>
